@@ -309,10 +309,11 @@ $xml = str_replace('YYYYYYYY', $conf['senderId'], $xml); // dummy-arves peab ole
 $tokenSender = refreshClientToken($conf['senderId']);
 $uri = sendInvoice($xml, $tokenSender);
 
+echo "Saadetud müügiarve URI: " . $uri . "\n";
+
 // KLIENT SAAJA LAEB ALLA OSTUARVEID
 
 $tokenReceiver = refreshClientToken($conf['receiverId']);
-
 $purchaseInvoices = getPurchaseInvoices($tokenReceiver);
 while (count($purchaseInvoices) > 0) {
 

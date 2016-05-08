@@ -24,21 +24,20 @@ Eeldatakse PHP 5 ja libcurl paketi olemasolu.
 Seadistamine toimub failis config.php.
 
 Programmi proovimiseks pole vaja eraldi seadistada. 
-Siiski on soovitatav muuta receiverId ja senderId väärtusteks enda äriregistrikoodid, sest kui mitu arendajat katsetavad seda programmi samal ajal, võivad tulemused olla ettearvamatud.
 
-Vaikimisi on sisse lülitatud *curl_verbose*, mille tulemusena kuvatakse konsoolile päringute ja vastuste päised ja sisud.
+Siiski on soovitatav muuta receiverId ja senderId väärtusteks enda äriregistrikoodid. 
 
-Programmi käivitamiseks 
+Nii välditakse situatsiooni kui kaks arendajat muudavad sama kliendi tokenit. Sellisel juhul hilisem tokeni muutja muudab kehtetuks varasema tokeni. 
+Samuti tekivad probleemid kui üks kustutab kõik ostuarved ära ja teine ei saa aru, miks müügiarvet enam EDI-s pole.
+(NB! Lähitulevikus tuleb eraldi test-server ning iga arendaja saab oma test-tokeni, siis on sellised situatsioonid välistatud)
+
+Vaikimisi on sisse lülitatud *curl_verbose=1*, mille tulemusena kuvatakse konsoolile päringute ja vastuste päised ja sisud.
+Kui on soovida lisada oma *print* silumisinfo kuvamist ja curl-i logid segavad, siis omistada *curl_verbose=0*.
+
 
 
 # Käivitamine
-    $>php main.php
 
- 
-# Tulevik
-
-Tulevikus tuleb eraldi EDI testserver ning iga arendaja peab testimiseks küsima eraldi tokeni. 
-Praegu on veel testimiseks avaldatud virtuaalse vahendaja token kõigile kasutajatele.
-
+    $>php main.php 
 
 
