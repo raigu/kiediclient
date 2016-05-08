@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<E_Invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="einvoice_ver1.11.xsd">
+    <Header>
+        <Date>2012-11-01</Date>
+        <FileId>faili id</FileId>
+        <AppId>EARVE</AppId>
+        <Version>1.1</Version>
+        <SenderId>SAATJA</SenderId>
+        <ReceiverId>VASTUVÕTJA</ReceiverId>
+    </Header>
+    <Invoice invoiceId="45678" regNumber="XXXXXXXX" serviceId="1234" channelId="ABCDEE2X"
+             channelAddress="EE306240693469621624" presentment="YES" invoiceGlobUniqId="ARVE_123456"
+             sellerContractId="Leping" sellerRegnumber="YYYYYYYY">
+        <!-- presentment – e-arve täismahus (väärtus=YES) või e-arve limiteeritud presenteerimiseks
+        (väärtus=No), piiratud presenteerimine kirjeldatud peatükis 3.2 -->
+        <!-- invoiceGlobUniqId – e-arve vahendaja poolt e-arvele omistatud globaalne unikaalne
+        tunnus -->
+        <!-- sellerContractId – e-arve lepingu number, müüja lepingu id -->
+        <!-- sellerRegNumber – müüja registrikood -->
+        <InvoiceParties>
+            <SellerParty>
+                <Name>TESTMÜÜJA AS</Name>
+                <!--müüja ehk maksukohuslane-->
+                <RegNumber>1234</RegNumber>
+                <VATRegNumber>EE1234</VATRegNumber>
+                <ContactData>
+                    <LegalAddress>
+                        <PostalAddress1>KAIKA 2</PostalAddress1>
+                        <City>Tallinn</City>
+                    </LegalAddress>
+                </ContactData>
+                <AccountInfo>
+                    <AccountNumber>12345678910</AccountNumber>
+                    <IBAN>EE765408082924162799</IBAN>
+                    <BankName>Pank</BankName>
+                </AccountInfo>
+            </SellerParty>
+            <BuyerParty>
+                <Name>TESTOSTJA AS</Name>
+                <RegNumber>12345678</RegNumber>
+                <!--Kauba soetaja-->
+                <ContactData>
+                    <LegalAddress>
+                        <PostalAddress1>KAIKA 2</PostalAddress1>
+                        <City>Tallinn</City>
+                    </LegalAddress>
+                </ContactData>
+            </BuyerParty>
+        </InvoiceParties>
+        <InvoiceInformation>
+            <Type type="DEB"/>
+            <DocumentName>Arve</DocumentName>
+            <InvoiceNumber>45678</InvoiceNumber>
+            <InvoiceDate>2012-11-01</InvoiceDate>
+        </InvoiceInformation>
+        <InvoiceSumGroup>
+            <InvoiceSum>1.12</InvoiceSum>
+            <VAT>
+                <VATRate>0</VATRate>
+                <VATSum>0</VATSum>
+            </VAT>
+            <TotalSum>1.12</TotalSum>
+            <Currency>EUR</Currency>
+        </InvoiceSumGroup>
+        <InvoiceItem>
+            <InvoiceItemGroup>
+                <ItemEntry>
+                    <!--Kauba/teenuse info-->
+                    <Description>Ostetud teenus</Description>
+                    <ItemDetailInfo>
+                        <ItemUnit>tk</ItemUnit>
+                        <ItemAmount>1</ItemAmount>
+                        <!--Maht-->
+                        <ItemPrice>1.12</ItemPrice>
+                    </ItemDetailInfo>
+                    <ItemSum>1.12</ItemSum>
+                    <!--Summa ilma käibemaksuta-->
+                    <VAT>
+                        <VATRate>0</VATRate>
+                        <VATSum>0</VATSum>
+                        <!--KM-määr-->
+                    </VAT>
+                    <ItemTotal>1.12</ItemTotal>
+                    <!--Kaup/teenus kokku-->
+                </ItemEntry>
+            </InvoiceItemGroup>
+        </InvoiceItem>
+        <AdditionalInformation>
+            <InformationName>Meeldetuletus</InformationName>
+            <InformationContent>Täname õigeaegselt tasutud arve eest!</InformationContent>
+        </AdditionalInformation>
+        <PaymentInfo>
+            <Currency>EUR</Currency>
+            <PaymentRefId>1234567</PaymentRefId>
+            <PaymentDescription>Arve 45678</PaymentDescription>
+            <Payable>YES</Payable>
+            <PayDueDate>2012-11-15</PayDueDate>
+            <PaymentTotalSum>1.12</PaymentTotalSum>
+            <PayerName>TESTOSTJA AS</PayerName>
+            <PaymentId>45678</PaymentId>
+            <PayToAccount>EE765408082924162799</PayToAccount>
+            <PayToName>TESTMÜÜJA AS</PayToName>
+        </PaymentInfo>
+    </Invoice>
+    <Footer>
+        <TotalNumberInvoices>1</TotalNumberInvoices>
+        <TotalAmount>1.12</TotalAmount>
+    </Footer>
+</E_Invoice>
