@@ -14,8 +14,8 @@ Programmis on näidatud järgmised tegevused:
 
 Eeldatakse PHP 5 ja libcurl paketi olemasolu.
 
-$> git clone git@github.com:raigu/kiediclient.git
-$> cd kiediclient
+    $> git clone git@github.com:raigu/kiediclient.git
+    $> cd kiediclient
 
 
 # Seadistamine
@@ -32,7 +32,7 @@ Programmi käivitamiseks
 
 
 # Käivitamine
-$>php main.php
+    $>php main.php
 
  
 # Tulevik
