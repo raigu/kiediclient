@@ -2,16 +2,21 @@
 
 Krediidiinfo [EDI REST liidese](https://services.krediidiinfo.ee/edi/) klient.
 
+EDI all mõeldakse siin Krediidiinfo elektrooniliste dokumentide vahendusteenust, 
+mille abil on võimalik integreerida infosüsteemi elektrooniliste arvete saatmist ja vastuvõtmist.
+
+Näidisprogrammi sihtgrupiks on EDI [vahendajate](http://services.krediidiinfo.ee/wiki/index.php/EDI#M.C3.B5isted) arendajad.
+
 Näidisprogrammi eesmärgiks on näidata ühte võimalust kuidas EDI-ga suhelda.
 
 Programmis on näidatud järgmised tegevused:
 * kliendi registreerimine EDI-s
 * kliendi tokeni uuendamine
 * müügiarve saatmine
-* ostuarvete vastuvõtmine
+* ostuarve vastuvõtmine
 
 
-Skript ühendub Krediidiinfo EDI test serveriga. Kasutamiseks on vaja saada Krediidiinfo käest vahendaja *access token*.
+Skript ühendub EDI test serveriga. Kasutamiseks on vaja saada Krediidiinfo käest vahendaja *access token*.
 
 
 # Installeerimine
