@@ -1,6 +1,6 @@
 # kiediclient
 
-Krediidiinfo [EDI REST liidese](services.krediidiinfo.ee/edi/) klient.
+Krediidiinfo [EDI REST liidese](https://services.krediidiinfo.ee/edi/) klient.
 
 Näidisprogrammi eesmärgiks on näidata ühte võimalust kuidas EDI-ga suhelda.
 
