@@ -119,7 +119,7 @@ function registerClientInEDI($clientId)
         // klient on EDI-s registreeritud. Kontrollime, kas see on registreeritud meile?
         $data = json_decode($body, $assoc = true);
         if ($data['mediatorId'] != $conf['mediatorId']) {
-            $err = "Klient saatjat ({$conf['senderId']}) ei saa EDI-s registreerida, " .
+            $err = "Klient saatjat ($clientId) ei saa EDI-s registreerida, " .
                 "sest see on registreeritud juba teise vahendaja {$data['mediatorId']} poolt.";
             throw new Exception($err);
         }
