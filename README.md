@@ -23,7 +23,7 @@ Skript ühendub EDI test serveriga. Kasutamiseks on vaja saada Krediidiinfo käe
 
 Eeldatakse PHP 5 ja libcurl paketi olemasolu.
 
-    $> git clone git@github.com:raigu/kiediclient.git
+    $> git clone https://github.com/raigu/kiediclient.git
     $> cd kiediclient
 
 
