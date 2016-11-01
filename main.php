@@ -293,8 +293,6 @@ function deletePurchaseInvoice($uri, $tokenReceiver)
 // Registreerima saatja.
 registerClientInEDI($conf['senderId']);
 
-registerClientInEDI($conf['receiverId']);
-
 // Kontrollime, kas klient saaja on EDI-s.
 if (! isReceiverInEDI($conf['receiverId'])) {
     // Kui klient saaja pole EDI-s, siis registreerime enda nimele.
